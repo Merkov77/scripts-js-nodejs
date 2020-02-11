@@ -18,3 +18,12 @@ function ExpansiveSecuence(array){
 }
 
 ExpansiveSecuence([1,3,5,7,10,20,25])
+
+
+/* 
+  [
+     1,  3,  5,  7, 10, 20,
+    25, 27, 29, 31, 34, 44,
+    49
+  ]
+*/

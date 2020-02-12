@@ -18,7 +18,7 @@ class SimplePerceptron{
   validate(e1,p1,e2,p2,u){
     let output = this.j(e1,p1,e2,p2,u);  
       this.dataBaseForLearn.map((e,i) => {
-        if (e1 != e2 || e1 === 0 && e2 === 0){
+        if (e1 != e2 || e1 === 0 && e2 === 0){ // Using AND
           if (output !== e[2]){
             p1 = output * -i * i/2.5 //New weight
             p2 = output * -i * i/2.5 //New weight

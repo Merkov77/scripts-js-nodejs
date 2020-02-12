@@ -1,6 +1,6 @@
 /*
   **
-    SimplePerceptron Using JS
+    SimplePerceptron AND Using JS
   **
 */
 

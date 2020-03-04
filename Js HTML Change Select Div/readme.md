@@ -1,1 +1,1 @@
-![](gifseldivcha.gif)
+![](giko.gif)

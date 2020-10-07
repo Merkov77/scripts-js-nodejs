@@ -1,0 +1,17 @@
+.sizepa{
+    width: 700px;
+    height: 780px;
+  }
+  .minsize{
+    width: 100px;
+  }
+  .player{
+    border-radius: 100%;
+    position: absolute;
+    margin: 20px;
+    padding: 20px;
+    left:0;
+    right:0;
+    bottom:0;
+    top:0;
+  }

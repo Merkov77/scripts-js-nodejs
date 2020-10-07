@@ -2,7 +2,28 @@ let training = []
   const root = document.getElementById("root")
 
   const player = document.createElement("div")
-  player.className = "player p-4 bg-primary "
+  player.className = "player p-4  bg-primary"
+  player.animate([{
+    boxShadow:"inset 0px 0px 20px black"
+  },{
+    boxShadow:"inset 0px 0px 0px black"
+  }],{duration:400, iterations:1})
+
+  const player2 = document.createElement("div")
+  player2.className = "player p-4  bg-danger"
+  player2.animate([{
+    boxShadow:"inset 0px 0px 20px black"
+  },{
+    boxShadow:"inset 0px 0px 0px black"
+  }],{duration:400, iterations:1})
+
+  const player3 = document.createElement("div")
+  player3.className = "player p-4  bg-warning"
+  player3.animate([{
+    boxShadow:"inset 0px 0px 20px black"
+  },{
+    boxShadow:"inset 0px 0px 0px black"
+  }],{duration:400, iterations:1})
 
   let count = 0
   for (let x = 0; x < 30; x++){
@@ -10,6 +31,8 @@ let training = []
     div.className = "minsize m-2 p-3 rounded flex-grow-1 position-relative"
     if (x === 0){
       div.appendChild(player)
+      div.appendChild(player2)
+      div.appendChild(player3)
     }
     if (x % 2){
       div.classList.add("alert-dark")
@@ -190,7 +213,6 @@ let training = []
         let input = [0.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
         if (retro !== undefined){
-
           input[retro] = 1
         }
 
@@ -198,12 +220,29 @@ let training = []
         retro = result
 
         if (root.children[result] !== null && root.children[result] !== undefined){
-            root.children[result].appendChild(player)
             root.children[result].animate([{
               transform:"scale(0.8)"
             },{
               transform:"scale(1)"
             }],{duration:100, iterations:1})
+            root.children[result].appendChild(player)
+
+            setTimeout(function(){
+              root.children[result].animate([{
+              transform:"scale(0.8)"
+            },{
+              transform:"scale(1)"
+            }],{duration:100, iterations:1})
+              root.children[result].appendChild(player2)
+            },3000)
+            setTimeout(function(){
+              root.children[result].animate([{
+              transform:"scale(0.8)"
+            },{
+              transform:"scale(1)"
+            }],{duration:100, iterations:1})
+              root.children[result].appendChild(player3)
+            },6000)
           }
         console.log(result)
       }
